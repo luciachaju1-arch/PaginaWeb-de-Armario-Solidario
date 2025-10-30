@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Armario Solidario QR 💜</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Armario Solidario con QR💜</h1>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre">Sobre el proyecto</a></li>
+        <li><a href="#como-funciona">Cómo funciona</a></li>
+        <li><a href="#intercambio">Intercambio</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- INICIO -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h2>Un armario solidario para compartir útiles escolares</h2>
+      <p>Escaneá el código QR en tu escuela y accedé fácilmente a los útiles que necesitás o colaborá con una donación.</p>
+      <a href="#intercambio" class="btn">Ir al intercambio</a>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="about">
+    <h2>Sobre el proyecto</h2>
+    <p>
+      El <strong>Armario Solidario QR</strong> busca fomentar la solidaridad entre estudiantes.
+      Cada escuela contará con un armario con código QR que redirige a esta página para solicitar o donar útiles escolares.
+    </p>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section id="como-funciona" class="steps">
+    <h2>Cómo funciona</h2>
+    <div class="steps-container">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Escaneá el código QR</h3>
+        <p>Ubicá el armario solidario en tu escuela y escaneá el código QR.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Ingresá</h3>
+        <p>Usá la contraseña para acceder al área de intercambio.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Participá</h3>
+        <p>Ingresá a la sección de intercambio y colaborá con tu comunidad educativa.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERCAMBIO -->
+  <section id="intercambio" class="exchange">
+    <h2>Intercambio de Útiles Escolares</h2>
+
+    <!-- Contraseña -->
+    <div id="password-container">
+      <p>Por favor, ingresa la contraseña para continuar:</p>
+      <input type="password" id="password-input" placeholder="Contraseña">
+      <button onclick="checkPassword()">Entrar</button>
+      <p id="error-message" class="hidden">Contraseña incorrecta. Inténtalo de nuevo.</p>
+    </div>
+
+    <!-- Contenido principal (oculto hasta ingresar la contraseña) -->
+    <div id="main-content" class="hidden">
+      <header>
+        <h3>Bienvenido al Intercambio</h3>
+        <div id="visit-counter-container">
+          <p>Visitas: <span id="visit-counter">0</span></p>
+        </div>
+      </header>
+
+      <main>
+        <section>
+          <h4>Útiles Disponibles</h4>
+          <div id="available-items-list" class="items-grid"></div>
+        </section>
+
+        <section>
+          <h4>Doná tu útil</h4>
+          <form id="add-item-form">
+            <div class="form-group">
+              <label for="item-name">Nombre del útil:</label>
+              <input type="text" id="item-name" required>
+            </div>
+            <div class="form-group">
+              <label for="item-image">Foto del útil:</label>
+              <input type="file" id="item-image" accept="image/*" required>
+            </div>
+            <button type="submit">Donar útil</button>
+          </form>
+        </section>
+
+        <section>
+          <h4>Útiles Dejados</h4>
+          <div id="left-items-list" class="items-grid"></div>
+        </section>
+      </main>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contact">
+    <h2>Contacto</h2>
+    <p>¿Tenés dudas o querés colaborar?</p>
+    <p>Escribinos a <a href="mailto:contacto@armariosolidarioqr.com">contacto@armariosolidarioqr.com</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Armario Solidario QR | Hecho con 💜 por estudiantes</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
